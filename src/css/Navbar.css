@@ -1,0 +1,25 @@
+.nav-container {
+    background-color: #1d344a;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container h2 {
+    color: #ffff;
+}
+
+.a-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.a-container a {
+    color: #ffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+

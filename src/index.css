@@ -1,0 +1,15 @@
+.blue-button{
+  box-sizing: border-box;
+  border: none;
+  background-color: #1d344a;
+  padding: 0.5rem;
+  color: #ffff;
+}
+
+.white-button{
+  box-sizing: border-box;
+  border: none;
+  background-color: #ffff;
+  padding: 0.5rem;
+  color: #1d344a;
+}
