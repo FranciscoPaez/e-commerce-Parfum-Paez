@@ -1,27 +1,16 @@
-const products = [
+export const products = [
     {
-        id:'01',
-        name:'name01',
-        price:100,
-        description:'decription01',
-        stock:10,
-        img: 'https://i.postimg.cc/pdwTfMDp/jpg.png',
-        category: 'news'
-    },
-    {
-        id:'02',
         name:'name02',
         price:110,
-        description:'decription02',
-        stock:8,
+        description:'description02',
+        stock:80,
         img: 'https://i.postimg.cc/pdwTfMDp/jpg.png',
         category: 'offers'
     },
     {
-        id:'03',
         name:'name03',
         price:79,
-        description:'decription03',
+        description:'description03',
         stock:110,
         img: 'https://i.postimg.cc/pdwTfMDp/jpg.png',
         category: 'bestsellers'

@@ -13,7 +13,9 @@ const Navbar = () => {
                 <NavLink to='/category/offers'>Offers</NavLink>
                 <NavLink to='/category/bestsellers'>Best Sellers</NavLink>
             </div>
-            <CartWidget/>
+            <NavLink to='/cart'>
+                 <CartWidget/>
+            </NavLink>
         </nav>
     )
 }

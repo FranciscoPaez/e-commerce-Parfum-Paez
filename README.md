@@ -1,12 +1,26 @@
-# React + Vite
+# App Parfums 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a perfume e-commerce that was made to teach the basics of react with javascript learned in the Codehouse course.
 
-Currently, two official plugins are available:
+![app](/public/app.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Project installation ⚙
 
-## Expanding the ESLint configuration
+1. Clone the repository 
+2. Do the command `cd app-e-commerce-Parfum-Paez` to move to the project folder
+3. Install dependencies with the command `npm install`
+4. Launch the app by executing the command `npm run dev`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Version Host
+
+If you want to see the project online, enter the following link: [Coder Flex APP]()
+
+### Used Frameworks
+
+- [React Router Dom](https://reactrouter.com/): used for route navigation
+- [Firebase](https://firebase.google.com/): used as database
+- [React Hook Form](https://react-hook-form.com/) : used to validate forms
+
+Developed By Paez Francisco 🥽
+
+
