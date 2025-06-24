@@ -1,16 +1,16 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../context/CartContext"
-import { collection, serverTimestamp } from "firebase/firestore"
+import { collection, serverTimestamp, addDoc } from "firebase/firestore"
 import { db } from "../service/firebase"
-import { addDoc } from "firebase/firestore/lite"
 import { Link } from "react-router-dom"
 import { useForm } from "react-hook-form"
+
 
 const CheckoutUseForm = () => {
 
     const [orderId, setOrderId] = useState ('')
-    const { cart, cartTotal, clear } = useContext (CartContext)
-    const {register, handleSubmit, formState:{errs}, getValues} = useForm()
+    const { cart, cartTotal, clear } = useContext(CartContext)
+    const {register, handleSubmit, formState:{errors}, getValues} = useForm()
 
 
     const finishPurchase = (dataForm) => {
@@ -49,20 +49,22 @@ const CheckoutUseForm = () => {
             :
             <div>
             <h1>Complete wiht your information</h1>
-            <form onSubmit={handleSubmit(finishPurchase)}>
+            <form onSubmit={handleSubmit(finishPurchase)} style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
                 <input type="text" placeholder="Fullname" name="name" {...register("name", {required:true, minLength:3})}/>
-                {errs?.name?.type === "required" && <span style={{color:'red'}}>Complete username</span>}
-                {errs?.name?.type === "minLength" && <span style={{color:'red'}}>Your username is short</span>}
+                {errors?.name?.type === "required" && <span style={{color:'red'}}>Complete username</span>}
+                {errors?.name?.type === "minLength" && <span style={{color:'red'}}>Your username is short</span>}
 
                 <input type="text" placeholder="Address" name="address" {...register("address", {required:true, minLength:10, maxLength:40})}/>
-                {errs?.address?.type === "required" && <span style={{color:'red'}}>Complete address</span>}
-                {errs?.address?.type === "minLength" && <span style={{color:'red'}}>Your address must be at least 10 characters</span>}
-                {errs?.address?.type === "maxLength" && <span style={{color:'red'}}>Your address is very long</span>}
+                {errors?.address?.type === "required" && <span style={{color:'red'}}>Complete address</span>}
+                {errors?.address?.type === "minLength" && <span style={{color:'red'}}>Your address must be at least 10 characters</span>}
+                {errors?.address?.type === "maxLength" && <span style={{color:'red'}}>Your address is very long</span>}
 
                 <input type="email" placeholder="Email" name="email" {...register("email", {required:true})}/>
+                {errors?.email?.type === "required" && <span style={{color:'red'}}>Complete</span>}
 
                 <input type="email" placeholder="Repeat your email" name="email2" {...register("secondemail", {required:true, validate:{equalsMails: mail2 => mail2 === getValues().email}})}/>
-                {errs?.secondmail?.type === "equalMails" && <span style={{color:'red'}}>The emails do not match</span>}
+                {errors?.secondemail?.type === "required" && <span style={{color:'red'}}>Complete</span>}
+                {errors?.secondemail?.type === "equalMails" && <span style={{color:'red'}}>The emails do not match</span>}
                 <button type="submit">Finish purchase</button>
             </form>
         </div>

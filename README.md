@@ -11,9 +11,6 @@ This project is a perfume e-commerce that was made to teach the basics of react 
 3. Install dependencies with the command `npm install`
 4. Launch the app by executing the command `npm run dev`
 
-### Version Host
-
-If you want to see the project online, enter the following link: [Coder Flex APP]()
 
 ### Used Frameworks
 

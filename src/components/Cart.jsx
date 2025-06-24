@@ -8,7 +8,7 @@ const Cart = () => {
     const { cart } = useContext(CartContext)
     return(
         <>
-          {cart.lenght ? <CartView/> : <EmptyCart/>}
+          {cart.length ? <CartView/> : <EmptyCart/>}
         </>
     )
 }
